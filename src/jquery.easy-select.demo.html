@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <title>jquery.easy-select.js demo</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="stylesheet" href="./jquery.easy-select.css">
+    <script src="../libs/jquery/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./jquery.easy-select.js"></script>
+</head>
+<body>
+    <div id="subjects" class="easy-select"></div>
+    <br>
+    <div id="grades" class="easy-select" data-placeholder="请选择年级"></div>
+    <script>
+        $('#subjects').easySelect({
+            placeholder: '请选择科目',
+            data: [
+                    {subjectID: '001', subjectName: '语文'},
+                    {subjectID: '002', subjectName: '数学'},
+                    {subjectID: '003', subjectName: '英语'},
+                  ],
+            valueField: 'subjectID',
+            textField: 'subjectName',
+            item: 1,
+            addItemTips: '新增科目',
+            addItemCallback: function () {
+                console.log('新增科目');
+                var _time = (new Date()).getTime();
+                return {
+                    result: true,
+                    data: {
+                        subjectID: _time,
+                        subjectName: '科目' + _time
+                    }
+                };
+            }
+        });
+
+        $('#grades').easySelect({
+            data: [
+                    {gradeID: '001', gradeName: '一年级'},
+                    {gradeID: '002', gradeName: '二年级'},
+                    {gradeID: '003', gradeName: '三年级'},
+                  ],
+            valueField: 'gradeID',
+            textField: 'gradeName',
+            addItemTips: '新增年级',
+            addItemCallback: function () {
+                console.log('新增年级');
+                var _time = (new Date()).getTime();
+                return {
+                    result: true,
+                    data: {
+                        gradeID: _time,
+                        gradeName: '年级' + _time
+                    }
+                };
+            }
+        });
+    </script>
+</body>
+</html>

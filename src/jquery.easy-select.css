@@ -1,0 +1,143 @@
+/* 十字图标 begin */
+.cross-icon {
+    box-sizing: content-box;
+    /*width: 26px;*/
+    height: 26px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    /*margin: 8px;*/
+    background: #F2F2F0;
+    cursor: pointer;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.cross-icon.text {
+    padding-left: 26px;
+    line-height: 26px;
+}
+.cross-icon:before,
+.cross-icon:after {
+    display: block;
+    background: #999;
+    border-radius: 1px;
+    position: absolute;
+    content: "";
+}
+/* 横 */
+.cross-icon:before {
+    width: 16px;
+    height: 2px;
+    top: 12px;
+    left: 5px;
+}
+/* 竖 */
+.cross-icon:after {
+    width: 2px;
+    height: 16px;
+    top: 5px;
+    left: 12px;
+}
+.cross-icon:hover {
+    color: #008000;
+}
+.cross-icon:not(.no-border):hover {
+    border: 1px solid #008000;
+    box-shadow: 0 0 4px #008000;
+}
+.cross-icon:hover:before,
+.cross-icon:hover:after {
+    background: #008000;
+    box-shadow: 0 0 2px #008000;
+}/* 十字图标 end */
+
+
+.easy-select {
+    box-sizing: border-box;
+    width: 150px;
+    height: 30px;
+    padding: 2px 5px;
+    line-height: 26px;
+    border: 1px solid #DAC8B3;
+    color: #5A533D;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.easy-select .placeholder {
+    color: #A9A9A9;
+}
+.easy-select .selected-value {
+    display: inline-block;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: default;
+}
+.easy-select:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    float: right;
+}
+.easy-select.options-hide:after {
+    border-top-color: #808080;
+    margin-top: 9px;
+}
+.easy-select.options-show:after {
+    border-bottom-color: #808080;
+    margin-top: 3px;
+}
+.easy-options-wrapper {
+    box-sizing: border-box;
+    width: 150px;
+    /*margin-top: -1px;*/
+    border: 1px solid #DAC8B3;
+    border-top-color: #eee;
+    background: #fff;
+    color: #5A533D;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+.easy-option {
+    cursor: default;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.easy-option,
+.add-item {
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    padding: 2px 5px;
+    line-height: 26px;
+}
+.easy-option.hover {
+    background: #1CA3ED;
+    color: #fff;
+}
+.add-item {
+    height: 26px;
+    padding: 0;
+}
+.add-item.hover {
+    background: #1CA3ED;
+    color: #fff;
+    cursor: pointer;
+}
+.add-item .cross-icon {
+    border: none;
+    font-weight: bold;
+}
